@@ -122,19 +122,27 @@ public class Continuamos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         String name;
         char catego;
         int tarifa;
-        double horas;
-        
+        double horas, sueldo;
+
         name = txtName.getText();
         catego = txtCate.getText().charAt(0);
-        tarifa = txtHora.getText().charAt(0);
-        horas = txtHora.getText().charAt(0);
-        
+
+        tarifa = Integer.parseInt(txtHora.getText());
+        horas = Double.parseDouble(txtHora.getText());
+
+        sueldo = horas * tarifa;
+
         txtResult.setText("");
-        txtResult.append("");
+        txtResult.append("colaborador :" + name + "\n");
+        txtResult.append("Categoria :" + catego + "\n");
+
+        txtResult.append("sueldo :" + sueldo + " soles");
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
